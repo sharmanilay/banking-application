@@ -50,7 +50,7 @@ Router.post('/signup', async (req, res) => {
       'insert into bank_user(first_name, last_name, email, password) values($1, $2, $3, $4)',
       [first_name, last_name, email, hashedPassword]
     )
-    res.status.(400).send();
+    res.status(400).send();
   } catch (error) {
     res.status(400).send({
       signup_error: 'Error signing up...Try again later.'
